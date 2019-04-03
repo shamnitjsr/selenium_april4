@@ -1,5 +1,6 @@
 package com.ibm.sam;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -29,7 +30,12 @@ public class Facbook {
 		 */
 
 		driver.get("https://www.facebook.com/");
+		
 		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//input[@name='email']")).sendKeys("1234455");
+		driver.findElement(By.xpath("//input[@data-testid='royal_pass']")).sendKeys("89859689");
+		driver.findElement(By.xpath("//input[@aria-label='Log In']")).click();
+		
 		driver.close();
 
 	}
