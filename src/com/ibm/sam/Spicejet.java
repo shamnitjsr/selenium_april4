@@ -12,6 +12,8 @@ public class Spicejet {
 				  driver=new ChromeDriver();
 				 driver.get("https://www.spicejet.com/");
 					driver.manage().window().maximize();
+			driver.navigate().to("https://www.facebook.com/");
+		
 					driver.close();
 
 	}
